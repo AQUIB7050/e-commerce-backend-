@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,12 +20,10 @@ public class Rating {
 	private Long id;
 	
 	@ManyToOne
-	@JoinColumn(name="product_id", nullable=false)
 	private User user;
 	
 	@JsonIgnore
 	@ManyToOne
-	@JoinColumn(name="product_id", nullable=false)
 	private Product product;
 	
 	private double rating;

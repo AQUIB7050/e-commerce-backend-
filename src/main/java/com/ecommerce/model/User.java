@@ -21,7 +21,7 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
+	private Long id;
 	
 	private String firstName;
 	
@@ -58,11 +58,11 @@ public class User {
 		
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -154,7 +154,7 @@ public class User {
 		this.createdAt = createdAt;
 	}
 
-	public User(int id, String firstName, String lastName, String password, String email, String role, String mobile,
+	public User(Long id, String firstName, String lastName, String password, String email, String role, String mobile,
 			List<Address> address, List<PaymentInformation> paymentInformation, List<Rating> ratings,
 			List<Review> reviews, LocalDateTime createdAt) {
 		super();
